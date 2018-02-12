@@ -1,2 +1,9 @@
-# actuary
-Compilation of useful Actuarial code and related documents
+# Actuary
+Compilation of useful actuarial code and related documents.
+
+May include:
+
+Distributions
+Datasets
+Lists of Related Links, Subjects, or Concepts
+
