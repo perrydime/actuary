@@ -1,4 +1,5 @@
 import rpy2.robjects as robj
 
-pi = robj.r['pi']
-print(pi[0])
+robj.r["MYdata = read.csv['data.csv', header=TRUE]"]
+robj.r["fit = lm(Y ~ X, data=MYdata)"]
+print(robj.r["summary(fit)"])
