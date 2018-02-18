@@ -1,3 +1,11 @@
+# Read CSV into R
+MyData <- read.csv(file="c:/TheDataIWantToReadIn.csv", header=TRUE, sep=",")
+
+names(MyData) <- c("new_name", "another_new_name")
+
+new <- cbind(MyData[0], MyData[1]:MyData[7])
+
+
 # Multiple Linear Regression Example
 fit <- lm(y ~ x1 + x2 + x3, data=mydata)
 summary(fit) # show results
