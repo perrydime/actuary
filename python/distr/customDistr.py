@@ -12,8 +12,11 @@ class custom(rv_continuous):
         return y
 custom = custom(name='custom')
 
-print("%.4f" % custom.mean())
+# print("%.4f" % custom.mean())
+array = custom.rvs(size=30)
 
+for i in array:
+    print(custom.pdf(i))
 
 '''
 rvs(*args, **kwds)	Random variates of given type.
