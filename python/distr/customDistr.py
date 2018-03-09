@@ -15,8 +15,12 @@ custom = custom(name='custom')
 # print("%.4f" % custom.mean())
 array = custom.rvs(size=30)
 
-for i in array:
-    print(custom.pdf(i))
+#for i in array:
+#    print(custom.pdf(i))
+
+for i in range(0,29):
+    print(custom.pdf(array[i]))
+
 
 '''
 rvs(*args, **kwds)	Random variates of given type.
