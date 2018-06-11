@@ -1,22 +1,21 @@
-from sympy import *
-init_printing(use_unicode=False)
-x = symbols('x')
-
+import sympy  as sy
+x = sy.symbols('x')
+sy.init_printing(use_unicode=False)
 # Peak of distribution
 # peak = 3
 
 
 # c = b^2/4a + ln(-a/pi)/2
 b = 0
-d = sqrt(1/(72*pi))
-c = ln(d)
+d = sy.sqrt(1/(72*sy.pi))
+c = sy.ln(d)
 
 # (peak/d) sets the peak
-y = (exp((-((x-36)**2)/72) + b*x + c))# *(peak/d)
+y = (sy.exp((-((x-36)**2)/72) + b*x + c))# *(peak/d)
 
-plot(y,(x,0,100))
+#sy.plot(y,(x,0,100))
 
 
-# pprint(y)
+sy.pprint(y)
 
-print(y.subs(x,0).evalf(20))
+# print(y.subs(x,0).evalf(20))
