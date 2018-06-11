@@ -8,10 +8,10 @@
 # for i, name in enumerate(friends):
 #     print "iteration {iteration} is {name}".format(iteration=i, name=name)
 #
-# parents, babies = (1, 1)
-# while babies < 100:
-#     print 'This generation has {0} babies'.format(babies)
-#     parents, babies = (babies, parents + babies)
+#parents, babies = (1, 1)
+#while babies < 100:
+#	print 'This generation has {0} babies'.format(babies)
+#	parents, babies = (babies, parents + babies)
 #
 #
 #
@@ -23,12 +23,12 @@
 # greet('Bob')
 #
 #
-# import re
-# for test_string in ['555-1212', 'ILL-EGAL']:
-#     if re.match(r'^\d{3}-\d{4}$', test_string):
-#         print test_string, 'is a valid US local phone number'
-#     else:
-#         print test_string, 'rejected'
+import re
+#for test_string in ['555-1212', 'ILL-EGAL']:
+#    if re.match(r'^\d{3}-\d{4}$', test_string):
+#        print test_string, 'is a valid US local phone number'
+#    else:
+#        print test_string, 'rejected'
 #
 #
 #
@@ -42,31 +42,33 @@
 #
 #
 # This program adds up integers in the command line
-# import sys
-# try:
-#     total = sum(int(arg) for arg in sys.argv[1:])
-#     print 'sum =', total
-# except ValueError:
-#     print 'Please supply integer arguments'
+#import sys
+#try:
+#    total = sum(int(arg) for arg in sys.argv[1:])
+#    print 'sum =', total
+#except ValueError:
+#    print 'Please supply integer arguments'
 #
 #
 #
 #
-# from time import localtime
-# activities = {8: 'Sleeping',
-#               9: 'Commuting',
-#               17: 'Working',
-#               18: 'Commuting',
-#               20: 'Eating',
-#               22: 'Resting' }
-# time_now = localtime()
-# hour = time_now.tm_hour
-# for activity_time in sorted(activities.keys()):
-#     if hour < activity_time:
-#         print activities[activity_time]
-#         break
-# else:
-#     print 'Unknown, AFK or sleeping!'
+"""
+from time import localtime
+activities = {8: 'Sleeping',
+              9: 'Commuting',
+              17: 'Working',
+              18: 'Commuting',
+              20: 'Eating',
+              22: 'Resting' }
+time_now = localtime()
+hour = time_now.tm_hour
+for activity_time in sorted(activities.keys()):
+    if hour < activity_time:
+        print activities[activity_time]
+        break
+else:
+    print 'Unknown, AFK or sleeping!'
+"""
 #
 #
 #
@@ -157,20 +159,22 @@
 #
 #
 #
-# import csv
-# write stocks data as comma-separated values
-# writer = csv.writer(open('stocks.csv', 'wb', buffering=0))
-# writer.writerows([
-#     ('GOOG', 'Google, Inc.', 505.24, 0.47, 0.09),
-#     ('YHOO', 'Yahoo! Inc.', 27.38, 0.33, 1.22),
-#     ('CNET', 'CNET Networks, Inc.', 8.62, -0.13, -1.49)
-# ])
-# read stocks data, print status messages
-# stocks = csv.reader(open('stocks.csv', 'rb'))
-# status_labels = {-1: 'down', 0: 'unchanged', 1: 'up'}
-# for ticker, name, price, change, pct in stocks:
-#     status = status_labels[cmp(float(change), 0.0)]
-#     print '%s is %s (%s%%)' % (name, status, pct)
+"""
+import csv
+#write stocks data as comma-separated values
+writer = csv.writer(open('stocks.csv', 'wb', buffering=0))
+writer.writerows([
+    ('GOOG', 'Google, Inc.', 505.24, 0.47, 0.09),
+    ('YHOO', 'Yahoo! Inc.', 27.38, 0.33, 1.22),
+    ('CNET', 'CNET Networks, Inc.', 8.62, -0.13, -1.49)
+])
+#read stocks data, print status messages
+stocks = csv.reader(open('stocks.csv', 'rb'))
+status_labels = {-1: 'down', 0: 'unchanged', 1: 'up'}
+for ticker, name, price, change, pct in stocks:
+    status = status_labels[cmp(float(change), 0.0)]
+    print '%s is %s (%s%%)' % (name, status, pct)
+"""
 #
 #
 #
@@ -276,34 +280,34 @@
 #
 #
 #
-#'''
-#import random
-#
-#guesses_made = 0
-#
-#name = raw_input('Hello! What is your name?\n')
-#
-#number = random.randint(1, 20)
-#print 'Well, {0}, I am thinking of a number between 1 and 20.'.format(name)
-#
-#while guesses_made < 6:
-#
-#    guess = int(raw_input('Take a guess: '))
-#
-#    guesses_made += 1
-#
-#    if guess < number:
-#        print 'Your guess is too low.'
-#
-#    if guess > number:
-#        print 'Your guess is too high.'
-#
-#    if guess == number:
-#        break
-#
-#if guess == number:
-#    print 'Good job, {0}! You guessed my number in {1} guesses!'.format(name, guesses_made)
-#else:
-#    print 'Nope. The number I was thinking of was {0}'.format(number)
-#'''
+
+import random
+
+guesses_made = 0
+
+name = raw_input('Hello! What is your name?\n')
+
+number = random.randint(1, 20)
+print 'Well, {0}, I am thinking of a number between 1 and 20.'.format(name)
+
+while guesses_made < 6:
+
+    guess = int(raw_input('Take a guess: '))
+
+    guesses_made += 1
+
+    if guess < number:
+        print 'Your guess is too low.'
+
+    if guess > number:
+        print 'Your guess is too high.'
+
+    if guess == number:
+        break
+
+if guess == number:
+    print 'Good job, {0}! You guessed my number in {1} guesses!'.format(name, guesses_made)
+else:
+    print 'Nope. The number I was thinking of was {0}'.format(number)
+
 #
